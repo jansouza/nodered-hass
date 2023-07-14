@@ -45,7 +45,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/nodered-hass:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/nodered-hass:${{ steps.tag.outputs.tag }}
-            ghcr.io/${{ github.repository_owner }}/nodered-hass:latest
-            ghcr.io/${{ github.repository_owner }}/nodered-hass:${{ steps.tag.outputs.tag }}
+            jansouza/nodered-hass:latest
+            jansouza/nodered-hass:${{ steps.tag.outputs.tag }}
+            ghcr.io/jansouza/nodered-hass:latest
+            ghcr.io/jansouza/nodered-hass:${{ steps.tag.outputs.tag }}
