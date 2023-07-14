@@ -43,10 +43,9 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: true
-          tags: | 
-            jansouza/nodered-hass:latest
-            jansouza/nodered-hass:latest:${{ steps.tag.outputs.tag }}
-            ghcr.io/jansouza/nodered-hass:latest
-            ghcr.io/jansouza/nodered-hass:${{ steps.tag.outputs.tag }}
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/nodered-hass:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/nodered-hass:${{ steps.tag.outputs.tag }}
+            ghcr.io/${{ github.repository_owner }}/nodered-hass:latest
+            ghcr.io/${{ github.repository_owner }}/nodered-hass:${{ steps.tag.outputs.tag }}
