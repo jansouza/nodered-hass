@@ -1,4 +1,4 @@
-name: Release Docker Image with new Tag
+name: Release Docker Image
 
 on:  
   push:
