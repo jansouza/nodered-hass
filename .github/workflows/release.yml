@@ -1,9 +1,12 @@
 name: Release Docker Image
 
-on:  
+on:
   push:
-    tags:
-      - '*'
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   release-docker:
