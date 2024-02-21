@@ -28,8 +28,8 @@
  * - debugUseColors (disabled, won't work in the add-on)
  * - flowFile (fixed to flows.json)
  * - credentialSecret (credentials_secret in the add-on configuration)
- * - userDir (is set fixed to `/config/node-red`)
- * - nodesDir (is set fixed to `/config/node-red/nodes`)
+ * - userDir (is set fixed to `/config`)
+ * - nodesDir (is set fixed to `/config/nodes`)
  * - adminAuth (known as users in the add-on configuration)
  * - https (ssl settings in the add-on configuration)
  * - logging.console.level (log_level in the add-on configuration)
@@ -169,6 +169,7 @@ module.exports = {
   // If not set, the following default order is used:
   paletteCategories: [
     "home_assistant",
+    "home_assistant entities",
     "subflows",
     "common",
     "function",
